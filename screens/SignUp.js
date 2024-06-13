@@ -23,11 +23,11 @@ const SignUp = ({ navigation }) => {
     if (email !== "" && password !== "") {
       createUserWithEmailAndPassword(authInstance, email, password)
         .then(() => {
-          Alert("Sign up success");
+          console.log("Sign up success");
         })
         .catch((error) => {
           const errorMessage = error.message;
-          Alert("Sign up error", errorMessage);
+          console.log("Sign up error", errorMessage);
         });
     }
   };

@@ -23,11 +23,11 @@ const Login = ({ navigation }) => {
     if (email !== "" && password !== "") {
       signInWithEmailAndPassword(authInstance, email, password)
         .then(() => {
-          Alert(" Login success");
+          Alert.alert(" Login success");
         })
         .catch((error) => {
           const errorMessage = error.message;
-          Alert("Login error", errorMessage);
+          Alert.alert("Login error", errorMessage);
         });
     }
   };

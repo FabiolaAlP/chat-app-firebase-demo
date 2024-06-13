@@ -97,7 +97,7 @@ const Chat = () => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    marginVertical: 15,
+    marginBottom: 15,
   },
 });
 export default Chat;

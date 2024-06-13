@@ -8,6 +8,8 @@ import Chat from "../screens/Chat";
 import Login from "../screens/Login";
 import SignUp from "../screens/SignUp";
 import Home from "../screens/Home";
+import ChatList from "../screens/ChatList";
+import ChatScreen from "../screens/ChatScreen";
 import { createContext, useContext, useEffect, useState } from "react";
 import { ActivityIndicator, View } from "react-native";
 
@@ -25,8 +27,12 @@ export const AuthUserProvider = ({ children }) => {
 function ChatStack() {
   return (
     <Stack.Navigator defaultScreenOptions={Home}>
-      <Stack.Screen name="Home" component={Home} />
-      <Stack.Screen name="Chat" component={Chat} />
+      <Stack.Screen
+        name="ChatList"
+        component={ChatList}
+        options={{ headerStyle: { height: 100 } }}
+      />
+      <Stack.Screen name="ChatScreen" component={ChatScreen} />
     </Stack.Navigator>
   );
 }
